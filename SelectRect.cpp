@@ -55,6 +55,7 @@ void CSelectRect::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CSelectRect, CDialog)
 	//{{AFX_MSG_MAP(CSelectRect)
 	ON_WM_PAINT()
+	ON_WM_ERASEBKGND()
 	ON_WM_MOUSEMOVE()
 	ON_WM_LBUTTONUP()
 	ON_WM_RBUTTONUP()
@@ -232,7 +233,7 @@ void CSelectRect::OnPaint()
 	// Do not call CDialog::OnPaint() for painting messages
 }
 
-BOOL CSelectRect::OnEraseBkgnd()
+BOOL CSelectRect::OnEraseBkgnd(CDC* pDC)
 {
 	return TRUE;
 }

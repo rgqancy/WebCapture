@@ -203,9 +203,8 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <CustomBuildStep>
       <Message>Registering ActiveX Control...</Message>
-      <Command>regsvr32 /s /c "$(TargetPath)"
-echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
-</Command>
+      <Command>
+      </Command>
       <Outputs>$(OutDir)regsvr32.trg;%(Outputs)</Outputs>
     </CustomBuildStep>
     <Midl>
@@ -390,4 +389,9 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="WebCapture.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
