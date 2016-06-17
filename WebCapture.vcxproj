@@ -251,6 +251,7 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
       </DataExecutionPrevention>
       <ImportLibrary>.\Debug/WebCapture.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
