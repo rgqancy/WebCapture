@@ -1,0 +1,71 @@
+// WebCapture.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (WebCapture.tlb) that will become a resource in
+// WebCapture.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(99552144-1021-44F0-A7AD-D47CD7E5CE57), version(1.0),
+  helpfile("WebCapture.hlp"),
+  helpstring("WebCapture ActiveX Control module"),
+  control ]
+library WEBCAPTURELib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CWebCaptureCtrl
+
+	[ uuid(971990B5-F442-4AD8-8D5D-7977016C486F),
+	  helpstring("Dispatch interface for WebCapture Control"), hidden ]
+	dispinterface _DWebCapture
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CWebCaptureCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CWebCaptureCtrl)
+			[id(1)] void OnCapture();
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CWebCaptureCtrl
+
+	[ uuid(1B4266D0-8F95-4F5C-B932-1AC5814B8F0E),
+	  helpstring("Event interface for WebCapture Control") ]
+	dispinterface _DWebCaptureEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CWebCaptureCtrl)
+			[id(1)] void OnCaptureData(BSTR data);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CWebCaptureCtrl
+
+	[ uuid(104C0F32-19FD-41AC-89E9-F38704E0BAA9),
+	  helpstring("WebCapture Control"), control ]
+	coclass WebCapture
+	{
+		[default] dispinterface _DWebCapture;
+		[default, source] dispinterface _DWebCaptureEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
