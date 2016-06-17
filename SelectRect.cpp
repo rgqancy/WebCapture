@@ -233,7 +233,7 @@ void CSelectRect::OnPaint()
 	// Do not call CDialog::OnPaint() for painting messages
 }
 
-BOOL CSelectRect::OnEraseBkgnd(CDC *pDC)
+BOOL CSelectRect::OnEraseBkgnd()
 {
 	return TRUE;
 }
