@@ -148,7 +148,7 @@
     <CustomBuildStep>
       <Message>Registering ActiveX Control...</Message>
       <Command>
-	  </Command>
+      </Command>
       <Outputs>$(OutDir)regsvr32.trg;%(Outputs)</Outputs>
     </CustomBuildStep>
     <Midl>
@@ -260,7 +260,7 @@
     <CustomBuildStep>
       <Message>Registering ActiveX Control...</Message>
       <Command>
-	  </Command>
+      </Command>
       <Outputs>$(OutDir)regsvr32.trg;%(Outputs)</Outputs>
     </CustomBuildStep>
     <Midl>

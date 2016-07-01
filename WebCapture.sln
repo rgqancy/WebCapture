@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebCapture", "WebCapture.vcxproj", "{DFDCA4BA-05B1-4AFF-8B8D-E1CC57ACC58A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebCapture", "WebCapture\WebCapture.vcxproj", "{DFDCA4BA-05B1-4AFF-8B8D-E1CC57ACC58A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
