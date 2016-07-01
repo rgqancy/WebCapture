@@ -1,0 +1,49 @@
+;TScrnCut.ocx 的 INF 文件
+;DestDir 可以为 10 则在 Windows 目录，为 11 则在 Windows\System(32) 目录，或为空则在 Occache 目录。
+
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+[DefaultInstall]
+CopyFiles=install.files
+RegisterOCXs=RegisterFiles
+AddReg=AddToRegistry
+[RInstallApplicationFiles]
+CopyFiles=install.files
+RegisterOCXs=RegisterFiles
+AddReg=AddToRegistry
+[DestinationDirs]
+install.files=11
+[SourceDisksNames]
+1=%DiskName%,TScrnCut.CAB,1
+
+[Add.Code]
+TScrnCut.ocx=TScrnCut.ocx
+[install.files]
+TScrnCut.ocx=TScrnCut.ocx
+[SourceDisksFiles]
+TScrnCut.ocx=1
+
+[TScrnCut.ocx]
+file-win32-x86=thiscab
+RegisterServer=yes
+clsid={D9B6FF64-EBC7-4C7D-B44C-E54C30978813}
+DestDir= 
+FileVersion=2,0,0,885
+
+[Setup Hooks]
+AddToRegHook=AddToRegHook
+
+[AddToRegHook]
+InfSection=DefaultInstall2
+
+[DefaultInstall2]
+AddReg=AddToRegistry
+
+[AddToRegistry]
+HKLM,"SOFTWARE\Classes\CLSID\{D9B6FF64-EBC7-4C7D-B44C-E54C30978813}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}"
+HKLM,"SOFTWARE\Classes\CLSID\{D9B6FF64-EBC7-4C7D-B44C-E54C30978813}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}"
+HKCR,"Licenses",,,"Licensing: Copying the keys may be a violation of established copyrights."
+[RegisterFiles]
+%11%\TScrnCut.ocx
+
